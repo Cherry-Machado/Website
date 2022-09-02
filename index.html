@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web de Cherry</title>
+        <meta http-equiv="refresh" content="500"/>
+        <meta http-equiv="Content-Type" content="text/html;charset= "ISO-8859-15"/>
+        <meta name="description" content="Web de Cherry"/>
+        <meta name="keywords" content="Web, blog, Cherry, diseño, multimedia">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
+    </head>
+    
+    <body>
+        <div class="logo">
+            <span itemprop="image"><img src="img/Cherry_logo.svg"/></span> 
+         
+        </div>
+        
+        <header class="cabeza">
+            
+            <div class="cajaheader">
+                
+                <h1><span itemprop="givenName">Cherry </span><span itemprop="familyName">Machado </span></h1>
+                <h2><span itemprop="jobTitle">Creativo Multimedia</span> </h2>
+            
+            </div>
+              
+            
+            <nav>
+                 <ul class="menuppal">
+                     <li><a href="inicio.html"><canvas id="iconoinicio" width="50" height="50"></canvas><br />Inicio</a></li>
+                     <li><a href="contacto.html"><canvas id="iconocontacto" width="50" height="50"></canvas><br />Contacto</a></li>
+                     <li><a href="noticias.html"><canvas id="icononoticias" width="50" height="50"></canvas><br />Noticias</a></li>
+                     <li><a href="sobremi.html"><canvas id="iconosobremi" width="50" height="50"></canvas><br />Sobre mi</a></li>
+                 </ul>
+             </nav>
+        </header>
+        
+        
+        <div id="principal" itemscope itemtype="https://schema.org/Person">
+           
+            <div id="contenido">
+                <section id="sobremi">
+                    <span itemprop="image"><div id="mifoto"></div><!--<img src="photo/cherry_machado.jpg" width="50px" height="50px"/></span>--> 
+                    <p>Soy un creativo Multimedia que me gusta programar páginas web para clientes de distintas áreas y disciplinas. Mi interés principal es la aplicación y la combinación de los últimos avances en tecnologías interactivas con el objetivo de mejorar la experiencia para el usuario final.</p>
+                </section>
+                <aside>
+                    <h5>Posts previos</h5>
+                        <ul>
+                            <li><a href="http://"><time>2011-01-01</time> / Feliz año Nuevo</a></li>
+                            <li><a href="http://"><time>2011-01-01</time> / Feliz año Nuevo</a></li>
+                            <li><a href="http://"><time>2011-01-01</time> / Feliz año Nuevo</a></li>
+                            <li><a href="http://"><time>2011-01-01</time> / Feliz año Nuevo</a></li>
+                        </ul>
+                </aside>
+                <section>
+                    <article>
+                        <div id="logoactualidad3d"></div>
+                        <time>2011-01-01</time>
+                        <h3>Actualidad</h3>
+                        <h4>El Portafolio de Cherry Machado</h4>
+                        <p>Aquí podrás ver el portafolio digital de todas y cada una de mis creaciones multimedias.</p>
+                    </article>
+                    <article>
+                        <div id="logoblender"></div>
+                        <time>2011-01-01</time>
+                        <h3>Sintel</h3>
+                        <h4>Nuevo cortometraje de Blender Fundation</h4>
+                        <p>Una vez más, vuelve a sorprendernos las capacidades de este maravilloso software libre de creación 3D </p>
+                        <video controls="controls" width="300px" height="150px" preload="preload">
+                            <source src="video/sintel.ogg" type="video/ogg"/>
+                            <source src="video/sintel.mp4" type="video/mp4"/>
+                            <source src="video/sintel.webm" type="video/webm"/>
+                            Tu navegador no soporta video. Haz clic <a href="">AQUI</a> para descargar un navegador compatible.
+                        </video> 
+                        <p></p>    
+                    </article>
+                    <article>
+                        <div id="logomifotoarticulo"></div>
+                        <time>2011-01-01</time> 
+                        <h3>Nuevo tema musical</h3>
+                        <h4>Otra composición más para el repertorio</h4>
+                        <p>Este tema no es totalmente nuevo, pero lo público para que lo puedan escuchar.</p>
+                        <audio src="audio/0802.ogg" controls="controls" preload="preload">
+                            Tu navegador no soporta video. Haz clic <a href="">AQUI</a> para descargar un navegador compatible.  
+                        </audio>
+                        <p></p>
+                    </article>   
+                </section>
+                <footer>
+                    <h6>
+                        <div class="vcard">
+                            <div> <span class="name">Cherry Machado - </span><span class="locality">Sao Miguel Paulista, </span><span class="region">Sao Paulo - </span><span class="postal-code">CEP 111011-111 - </span><span class="country-name">Brasil</span></div>
+                            <div> <span class="tel">(111) 11111-1111 - </span><span class="email">Email: cherry5467@gmail.com</span></div>
+                        </div>
+                    </h6> 
+                    <div id="result"></div>
+                        <script> 
+                            if (localStorage.pagecount) 
+                            {localStorage.pagecount = Number(localStorage.pagecount)+1;} 
+                            else
+                            {localStorage.pagecount = 1;} 
+                            document.writeln("Has visitado mi página: "+ localStorage.pagecount + " veces. ");
+                        </script>
+                        <script type="text/javascript">
+                            if (sessionStorage.pagecount) {sessionStorage.pagecount = Number(sessionStorage.pagecount)+1;} else {sessionStorage.pagecount = 1;}
+                            document.writeln("En esta sesión has visitado mi página: " + sessionStorage.pagecount + " veces");
+                        </script>
+            </div>
+            </footer>
+        </div>    
+    </body>
+</html>
+<script type="text/javascript">
+    var micolor = "Yellow";
+    var otrocolor = "Red";
+    var mitercercolor = "Red";
+    var escala = 0.5;
+
+    //Icono Sobremi
+
+    var c=document.getElementById("iconosobremi");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+    //Icono de Contacto
+
+    var c=document.getElementById("iconocontacto");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(otrocolor);
+    cxt.beginPath();
+    cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(otrocolor);
+    cxt.beginPath();
+    cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+     //Icono de Inicio
+     
+    var c=document.getElementById("iconoinicio");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*40,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(mitercercolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*30,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+     //Icono Noticias
+
+     var c=document.getElementById("icononoticias");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(micolor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+</script>
